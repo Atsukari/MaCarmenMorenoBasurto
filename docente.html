@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lic. María Del Carmen Moreno Basurto</title>
+    <style>
+        /* Estilo general */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Fondo general suave y neutro */
+            color: #333;
+        }
+
+        header {
+            background-color: #7FB3D5; /* Fondo azul claro que combina con los botones */
+            padding: 50px 40px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px; /* Letra grande para el nombre */
+        }
+
+        header p {
+            font-size: 18px; /* Letra más pequeña para el texto adicional */
+            margin-top: 10px;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .nav-buttons a {
+            text-decoration: none;
+            background-color: #A9CCE3; /* Botones azul claro */
+            color: white;
+            padding: 8px 12px; /* Tamaño reducido */
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px; /* Tamaño de fuente reducido */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-buttons a:hover {
+            background-color: #7FB3D5; /* Azul medio al pasar el cursor */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        /* Estilo para la tabla en la sección de Artículos y Ponencias */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #A9CCE3; /* Azul claro para encabezados */
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Estilo para las tablas de Artículos y Ponencias */
+        .articles-table, .papers-table {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #7FB3D5;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lic. María Del Carmen Moreno Basurto</h1>
+        <p>Profesora y Experta en Informática y Administración</p>
+    </header>
+
+    <nav>
+        <div class="nav-buttons">
+            <a onclick="showSection('datos-personales')">Datos Personales</a>
+            <a onclick="showSection('experiencia-laboral')">Experiencia Laboral</a>
+            <a onclick="showSection('educacion')">Educación</a>
+            <a onclick="showSection('cursos-actualizacion')">Cursos de Actualización</a>
+            <a onclick="showSection('cursos-impartidos')">Cursos Impartidos / Certificaciones</a>
+            <a onclick="showSection('articulos-publicados')">Artículos Publicados / Ponencias</a>
+        </div>
+    </nav>
+
+    <main class="container" id="content">
+        <!-- Contenido dinámico aquí -->
+    </main>
+
+    <script>
+        // Contenido de cada sección
+        const sections = {
+            "datos-personales": `
+                <h2>Datos Personales</h2>
+                <img src="docente.jpg" alt="Foto de perfil" class="profile-img">
+                <div class="personal-info">
+                    <h3>Información de Contacto</h3>
+                    <ul>
+                        <li><span>Correo Electrónico:</span> cmorenob78@yahoo.com.mx</li>
+                        <li><span>Correo Institucional:</span> mdmorenob@uaemex.mx</li>
+                        <li><span>Teléfono:</span> 5528420985</li>
+                    </ul>
+                    <h3>Información Personal</h3>
+                    <ul>
+                        <li><span>Edad:</span> 46 años</li>
+                    </ul>
+                </div>
+            `,
+                "experiencia-laboral": `
+                <h2>Experiencia Laboral</h2>
+                <div class="experience-section">
+                    <h3>Centro Universitario UAEM Valle de México</h3>
+                    <ul>
+                        <li><strong>Profesor Asignatura (2004 a la Fecha)</strong></li>
+                        <li>Impartir clases concernientes a la Licenciatura en Informática Administrativa presencial tales como: Análisis y Diseño de Sistemas, Ingeniería de Software, Seminario de Automatización Oficinas, Sistemas de Información Estratégicos y Gestión de Seguridad Informática.</li>
+                        <li>Licenciatura en Administración: Administración Informática, Sistemas de Información Administrativos.</li>
+                        <li>Licenciatura en Informática modalidad a Distancia: Ingeniería de Software, Sistemas de Información Estratégicos, Seminario de Sistemas de Información, Software de Base, Instalación y Seguridad Informática.</li>
+                        <li>Licenciatura en ICO: Análisis de Sistemas y Seguridad en la Información.</li>
+                        <li>Licenciatura en Derecho: TIC´s.</li>
+                        <li>Licenciatura en ISC: Calidad del Software.</li>
+                        <li>Tutor académico LIA desde 2013.</li>
+                        <li>Colaborador en eventos académicos para las Licenciaturas en Informática, Administración y Contaduría.</li>
+                    </ul>
+                </div>
+                <div class="experience-section">
+                    <h3>Grupo Universitario Modelo S.C.</h3>
+                    <ul>
+                        <li><strong>Profesor (Febrero 2003 a Diciembre 2006)</strong></li>
+                        <li>Impartir clases concernientes a la Licenciatura en Informática Administrativa, Licenciatura en Derecho, Diseño Gráfico y Administración, en temas de TIC´s, y Sistemas de Información.</li>
+                    </ul>
+                </div>
+                <div class="experience-section">
+                    <h3>Servicios Especiales de Video</h3>
+                    <ul>
+                        <li><strong>Subgerente tienda Coacalco (Agosto 1999 a Agosto 2001)</strong></li>
+                        <li>Labores administrativas, cortes de caja, recepción de proveedores, atención a usuarios, capacitación a empleados.</li>
+                    </ul>
+                </div>
+            `,
+            "educacion": `
+                <h2>Educación</h2>
+                <table>
+                    <tr>
+                        <th>Grado</th>
+                        <th>Institución</th>
+                        <th>Periodo</th>
+                        <th>Título Obtenido</th>
+                        <th>Cédula Profesional</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Maestría</strong></td>
+                        <td>ETAC Nodo Coacalco</td>
+                        <td>2008-2010</td>
+                        <td>Maestría en Administración en Procesos Industriales</td>
+                        <td>6582756</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Licenciatura</strong></td>
+                        <td>Instituto Tecnológico de Tlalnepantla</td>
+                        <td>1997-2001</td>
+                        <td>Licenciado en Informática</td>
+                        <td>3903312</td>
+                    </tr>
+                </table>
+            `,
+            "cursos-actualizacion": `
+                <h2>Cursos de Actualización</h2>
+                <div class="two-column-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Duración y Periodo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Taller: Elaboración de la Guía de Evaluación del Aprendizaje. En línea</td>
+                                <td>07 al 18 de octubre de 2024, 30 horas.</td>
+                            </tr>
+                            <tr>
+                                <td>Cómo Utilizar Plataformas de Inteligencia Artificial, para Enriquecer el Contenido Educativo en SEDUCA. En línea</td>
+                                <td>30 al 31 de octubre de 2024, 6 horas.</td>
+                            </tr>
+                            <tr>
+                                <td>Inteligencia Artificial para Docentes. En línea</td>
+                                <td>10 al 14 de junio de 2024, 25 horas.</td>
+                            </tr>
+                            <tr>
+                                <td>Uso de la Plataforma ODOO en modalidad en línea</td>
+                                <td>15 al 19 de enero de 2024, 25 horas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Duración y Periodo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Antenas WiMAX llevado a cabo en Centro Universitario UAEM Valle de México</td>
+                                <td>16 al 20 de enero de 2023, 25 horas.</td>
+                            </tr>
+                            <tr>
+                                <td>Minitab para Administradores llevado a cabo en Centro Universitario UAEM Valle de México</td>
+                                <td>15 al 20 de enero de 2024, 25 horas.</td>
+                            </tr>
+                            <tr>
+                                <td>Curso de Certificación EC1307: Impartición de Sesiones/Clases Síncronas Utilizando Plataformas, Dispositivos y Herramientas Digitales. Modalidad En línea</td>
+                                <td>11 al 16 de marzo de 2024, 25 horas.</td>
+                            </tr>
+                            <tr>
+                                <td>Network Defense Essentials. En línea</td>
+                                <td>26 al 30 de junio de 2023, 25 horas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            `,
+            "cursos-impartidos": `
+                <h2>Cursos Impartidos / Certificaciones</h2>
+                <h3>Cursos Impartidos</h3>
+                <table class="courses-table">
+                    <thead>
+                        <tr>
+                            <th>Curso</th>
+                            <th>Fecha y Modalidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Análisis DOFA</td>
+                            <td>13 al 17 de enero del 2020, Presencial</td>
+                        </tr>
+                        <tr>
+                            <td>Módulo II Dirección Estratégica Prospectiva</td>
+                            <td>25 de mayo al 28 de junio de 2023, Presencial</td>
+                        </tr>
+                        <tr>
+                            <td>Cursos para preparar a profesores</td>
+                            <td>Octubre 2023 (Línea)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Certificaciones</h3>
+                <table class="certifications-table">
+                    <thead>
+                        <tr>
+                            <th>Certificación</th>
+                            <th>Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Certificado de Competencia Laboral en el Estándar de Competencia</td>
+                            <td>Impartición de Cursos de Formación de Capital Humano de manera presencial grupal EC0217.01, Folio D-0011285622</td>
+                        </tr>
+                        <tr>
+                            <td>Certificado de Competencia Laboral en el Estándar de Competencia</td>
+                            <td>Evaluación de la competencia de candidatos con base en Estándares de Competencia EC0076, Folio D-0015036822</td>
+                        </tr>
+                        <tr>
+                            <td>Certificado de Competencia Laboral en el Estándar de Competencia</td>
+                            <td>Impartición de sesiones/clases síncronas utilizando plataformas, dispositivos y herramientas digitales EC1307, Folio D-0011285622</td>
+                        </tr>
+                    </tbody>
+                </table>
+            `,
+            "articulos-publicados": `
+                <h2>Artículos Publicados / Ponencias</h2>
+                <h3>Artículos Publicados</h3>
+                <table class="articles-table">
+                    <thead>
+                        <tr>
+                            <th>Año</th>
+                            <th>Artículos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2016</td>
+                            <td>Medir el rendimiento académico de los alumnos de L.I.A. del Centro Universitario UAEM Valle de México - Lugar: Tabasco 2016 Congreso Internacional de Academia Journals</td>
+                        </tr>
+                        <tr>
+                            <td>2016</td>
+                            <td>Identificación de un problema educativo que puede ser solucionado con un entorno virtual de aprendizaje - Lugar: Tuxpan 2016 Congreso Internacional de Academia Journals en Ciencias y Sustentabilidad</td>
+                        </tr>
+                        <tr>
+                            <td>2015</td>
+                            <td>Los dispositivos móviles en el modelo educativo basado en competencias en el sector público de la licenciatura en ingeniería en computación</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Ponencias</h3>
+                <table class="papers-table">
+                    <thead>
+                        <tr>
+                            <th>Año</th>
+                            <th>Artículos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2019</td>
+                            <td>Desempeño de egresados de la Licenciatura de Informática Administrativa del Centro Universitario UAEM, Valle de México: Examen General de Egreso</td>
+                        </tr>
+                    </tbody>
+                </table>
+            `,
+        };
+
+        // Función para mostrar las secciones
+        function showSection(section) {
+            document.getElementById("content").innerHTML = sections[section] || '<p>Contenido no disponible.</p>';
+        }
+
+        // Mostrar la sección de Datos Personales por defecto
+        showSection('datos-personales');
+    </script>
+
+<footer>
+    <p> Hecha con amor por los estudiantes Samuel Lopez, Edwin Raya, César Rodríguez y Edgar Rojas. </p>
+</footer>
+
+</body>
+</html>
